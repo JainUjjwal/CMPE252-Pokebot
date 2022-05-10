@@ -1,0 +1,87 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: find_pokemon
+  - action: action_find_pokemon
+  - intent: from_context
+  - action: action_from_context
+  - intent: pokemon_move
+  - action: action_pokemon_moves
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: from context
+  steps:
+  - intent: from_context
+  - action: action_from_context
+  
+- story: name and pokemon favourites
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: add_name
+  - action: action_save_name
+  - intent: show_name
+  - action: action_show_name
+  - intent: find_pokemon
+  - action: action_find_pokemon
+  - intent: from_context
+  - action: action_from_context
+  - intent: add_fav
+  - action: action_add_fav
+  - intent: show_fav
+  - action: action_show_fav
+
+- story: get help
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_help
+  - action: utter_help
+  - action: utter_functions
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: find_pokemon
+#   - action: action_find_pokemon
+#   - intent: find_pokemon
+#     entities:
+#     - pokemon: pokemon
+#   - action: action_find_pokemon
+
+# - story: interactive_story_2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: find_pokemon_type
+#   - action: action_find_pokemon_type
+#   - intent: find_pokemon_type
+#     entities:
+#     - pokemonType: pokemonType
+#   - action: action_find_pokemon
