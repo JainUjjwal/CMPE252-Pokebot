@@ -1,0 +1,43 @@
+version: "3.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Show pokemon information anytime the user asks for a pokemon
+  steps:
+  - intent: find_pokemon
+  - action: action_find_pokemon
+
+- rule: Show pokemon type information anytime the user asks for a pokemon
+  steps:
+  - intent: find_pokemon_type
+  - action: action_find_pokemon_type
+
+- rule: Add a pokemon to user's favourites
+  steps:
+  - intent: add_fav
+  - action: action_add_fav
+
+- rule: Show favorite pokemons
+  steps:
+  - intent: show_fav
+  - action: action_show_fav
+
+- rule: Show name
+  steps:
+  - intent: show_name
+  - action: action_show_name
+
+- rule: give pokemons moves
+  steps:
+  - intent: pokemon_move
+  - action: action_pokemon_moves

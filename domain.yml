@@ -1,0 +1,69 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- find_pokemon
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- find_pokemon_type
+- from_context
+- add_fav
+- show_fav
+- add_name
+- show_name
+- ask_help
+- pokemon_move
+entities:
+- pokemon
+- pokemonType
+- username
+slots:
+  pokemon_slot:
+    type: text
+    influence_conversation: false
+    initial_value: ""
+    mappings:
+    - type: from_entity
+      entity: pokemon
+  user_name:
+    type: text
+    influence_conversation: false
+    initial_value: ""
+    mappings:
+    - type: from_entity
+      entity: username
+actions:
+- action_find_pokemon
+- action_find_pokemon_type
+- action_hello_world
+- utter_greet
+- action_from_context
+- action_add_fav
+- action_show_fav
+- action_save_name
+- action_show_name
+- action_pokemon_moves
+responses:
+  utter_greet:
+  - text: Hey! How are you!
+  utter_cheer_up:
+  - text: Oh no, I'm sorry about that! I can help you out with some pokemon information!
+    image: https://wallpaperaccess.com/full/53138.jpg
+  utter_did_that_help:
+  - text: Did that help you? 
+  utter_happy:
+  - text: Glad to hear that! How can I help you today?
+  utter_goodbye:
+  - text: Bye, Thank you for using PokeBot!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_help:
+  - text: I can do a lot of things! Unfortunately, I'm limited to pokemon. You can ask me about a specific pokemon (Show me a lapras), or about a pokemon type! (Tell me about fairy type pokemon) I can even give you more information on a pokemon you asked about earlier! (Tell me more about that) or I could add a pokemon to your favorites list. (Add that to my favs)
+  utter_functions:
+  - text: Ask for a pokemon (what is a pikachu). Ask for pokemon type (show me a fire type pokemon). Ask for more information (tell me more about it) Add pokemon to favorites (add that to my favs)View your favorites (show me my favorite pokemon)Add and view your name (call me Ujjwal/what is my name?)

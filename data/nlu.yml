@@ -1,0 +1,465 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: pokemon_move
+  examples: |
+    - what are [bulbasaur](pokemon) moves?
+    - what moves does [ivysaur](pokemon) have?
+    - what are [venusaur](pokemon) moves?
+    - what moves does [charmander](pokemon) have?
+    - what are [charmeleon](pokemon) moves?
+    - what moves does [charizard](pokemon) have?
+    - what are [squirtle](pokemon) moves?
+    - what moves does [wartortle](pokemon) have?
+    - what are [blastoise](pokemon) moves?
+    - what moves does [caterpie](pokemon) have?
+    - what are [metapod](pokemon) moves?
+    - what moves does [butterfree](pokemon) have?
+    - what are [weedle](pokemon) moves?
+    - what moves does [kakuna](pokemon) have?
+    - what are [beedrill](pokemon) moves?
+    - what moves does [pidgey](pokemon) have?
+    - what are [pidgeotto](pokemon) moves?
+    - what moves does [pidgeot](pokemon) have?
+    - what are [rattata](pokemon) moves?
+    - what moves does [raticate](pokemon) have?
+    - what are [spearow](pokemon) moves?
+    - what moves does [fearow](pokemon) have?
+    - what are [ekans](pokemon) moves?
+    - what moves does [arbok](pokemon) have?
+    - what are [pikachu](pokemon) moves?
+    - what moves does [raichu](pokemon) have?
+    - what are [sandshrew](pokemon) moves?
+    - what moves does [sandslash](pokemon) have?
+    - what are [nidoran-f](pokemon) moves?
+    - what moves does [nidorina](pokemon) have?
+    - what are [nidoqueen](pokemon) moves?
+    - what moves does [nidoran-m](pokemon) have?
+    - what are [nidorino](pokemon) moves?
+    - what moves does [nidoking](pokemon) have?
+    - what are [clefairy](pokemon) moves?
+    - what moves does [clefable](pokemon) have?
+    - what are [vulpix](pokemon) moves?
+    - what moves does [ninetales](pokemon) have?
+    - what are [jigglypuff](pokemon) moves?
+    - what moves does [wigglytuff](pokemon) have?
+    - what are [zubat](pokemon) moves?
+    - what moves does [golbat](pokemon) have?
+    - what are [oddish](pokemon) moves?
+    - what moves does [gloom](pokemon) have?
+    - what are [vileplume](pokemon) moves?
+    - what moves does [paras](pokemon) have?
+    - what are [parasect](pokemon) moves?
+    - what moves does [venonat](pokemon) have?
+    - what are [venomoth](pokemon) moves?
+    - what moves does [diglett](pokemon) have?
+    - what are [dugtrio](pokemon) moves?
+    - what moves does [meowth](pokemon) have?
+    - what are [persian](pokemon) moves?
+    - what moves does [psyduck](pokemon) have?
+    - what are [golduck](pokemon) moves?
+    - what moves does [mankey](pokemon) have?
+    - what are [primeape](pokemon) moves?
+    - what moves does [growlithe](pokemon) have?
+    - what are [arcanine](pokemon) moves?
+    - what moves does [poliwag](pokemon) have?
+    - what are [poliwhirl](pokemon) moves?
+    - what moves does [poliwrath](pokemon) have?
+    - what are [abra](pokemon) moves?
+    - what moves does [kadabra](pokemon) have?
+    - what are [alakazam](pokemon) moves?
+    - what moves does [machop](pokemon) have?
+    - what are [machoke](pokemon) moves?
+    - what moves does [machamp](pokemon) have?
+    - what are [bellsprout](pokemon) moves?
+    - what moves does [weepinbell](pokemon) have?
+    - what are [victreebel](pokemon) moves?
+    - what moves does [tentacool](pokemon) have?
+    - what are [tentacruel](pokemon) moves?
+    - what moves does [geodude](pokemon) have?
+    - what are [graveler](pokemon) moves?
+    - what moves does [golem](pokemon) have?
+    - what are [ponyta](pokemon) moves?
+    - what moves does [rapidash](pokemon) have?
+    - what are [slowpoke](pokemon) moves?
+    - what moves does [slowbro](pokemon) have?
+    - what are [magnemite](pokemon) moves?
+    - what moves does [magneton](pokemon) have?
+    - what are [farfetchd](pokemon) moves?
+    - what moves does [doduo](pokemon) have?
+    - what are [dodrio](pokemon) moves?
+    - what moves does [seel](pokemon) have?
+    - what are [dewgong](pokemon) moves?
+    - what moves does [grimer](pokemon) have?
+    - what are [muk](pokemon) moves?
+    - what moves does [shellder](pokemon) have?
+    - what are [cloyster](pokemon) moves?
+    - what moves does [gastly](pokemon) have?
+    - what are [haunter](pokemon) moves?
+    - what moves does [gengar](pokemon) have?
+    - what are [onix](pokemon) moves?
+    - what moves does [drowzee](pokemon) have?
+    - what are [hypno](pokemon) moves?
+    - what moves does [krabby](pokemon) have?
+    - what are [kingler](pokemon) moves?
+    - what moves does [voltorb](pokemon) have?
+    - what moves does it have?
+    - what powers does it have?
+    - what are it's moves?
+
+- intent: ask_help
+  examples: |
+    - What can you do?
+    - what are you capable of doing?
+    - I need help
+    - Can you help me out?
+    - what are your capabilities?
+    - what are your functionalities?
+    - what pokemon can you tell me about?
+- intent: add_fav
+  examples: |
+    - add that to my favorites.
+    - favorite that
+
+- intent: show_fav
+  examples: |
+    - show me my favorites.
+    - show me my favs.
+    - what are in my favorites.
+    - what are my favs
+    - show my favorite list.
+    - show my fav list.
+    - how many pokemon's do I have in my favorites?
+
+- intent: add_name
+  examples: |
+    - Call me [Potato](username)
+    - My name is [Ujjwal](username)
+    - change my name to [Jake](username)
+    - My name is [Nisarg](username)
+    - My name is [Pavan](username)
+    - My name is [Sachin](username)
+    - My name is [Jain](username)
+    - My name is [Name](username)
+    - My name is [James](username)
+    - My name is [mary](username)
+    - My name is [Robert](username)
+    - My name is [patricia](username)
+    - My name is [john](username)
+    - My name is [Jennifer](username)
+    - My name is [michael](username)
+    - My name is [linda](username)
+    - My name is [william](username)
+    - My name is [elizabeth](username)
+    - My name is [david](username)
+    - My name is [barbara](username)
+    - My name is [richard](username)
+    - My name is [Susan](username)
+    - My name is [Joseph](username)
+    - My name is [Jessica](username)
+    - My name is [Thomas](username)
+    - My name is [Sarah](username)
+    - My name is [Charles](username)
+    - My name is [karen](username)
+    - My name is [Christopher](username)
+    - My name is [nancy](username)
+    - My name is [Daniel](username)
+    - My name is [Lisa](username)
+    - My name is [matthew](username)
+    - My name is [Betty](username)
+    - My name is [Anthony](username)
+    - My name is [Margaret](username)
+    - My name is [Mark](username)
+    - My name is [Sandra](username)
+    - My name is [donald](username)
+    - My name is [ashley](username)
+    - My name is [steven](username)
+    - My name is [Kimberly](username)
+    - My name is [Paul](username)
+    - My name is [emily](username)
+    - My name is [Andrew](username)
+    - My name is [Donna](username)
+    - My name is [joshua](username)
+    - My name is [Michelle](username)
+    - My name is [kenneth](username)
+    - My name is [Dorothy](username)
+    - My name is [Kevin](username)
+    - My name is [Carol](username)
+    - My name is [Brian](username)
+    - My name is [Amanda](username)
+    - My name is [george](username)
+    - My name is [Melissa](username)
+    - My name is [edward](username)
+    - My name is [Deborah](username)
+
+- intent: show_name
+  examples: |
+    - what is my name?
+    - what do you call me?
+    - could you tell me my name?
+
+- intent: from_context
+  examples: |
+    - Can you tell me more about it?
+    - Can I get more information about that?
+    - Tell me more about this
+    - I wanna know more
+    - Elaborate on that
+    - What are it's abilities
+    - what are it's stats
+
+- intent: find_pokemon_type
+  examples: |
+    - show me a [normal type](pokemonType)
+    - show me a [fighting type](pokemonType)
+    - show me a [flying type](pokemonType)
+    - show me a [poison type](pokemonType)
+    - show me a [ground type](pokemonType)
+    - show me a [rock type](pokemonType)
+    - show me a [bug type](pokemonType)
+    - show me a [ghost type](pokemonType)
+    - show me a [steel type](pokemonType)
+    - show me a [fire type](pokemonType)
+    - show me a [water type](pokemonType)
+    - show me a [grass type](pokemonType)
+    - show me a [electric type](pokemonType)
+    - show me a [psychic type](pokemonType)
+    - show me a [ice type](pokemonType)
+    - show me a [dragon type](pokemonType)
+    - show me a [dark type](pokemonType)
+    - show me a [fairy type](pokemonType)
+    
+- intent: find_pokemon
+  examples: |
+    - show me a [pokemon](pokemon)
+    - show me a [bulbasaur](pokemon)
+    - show me an [ivysaur](pokemon)
+    - show me a [venusaur](pokemon)
+    - show me a [charmander](pokemon)
+    - show me a [charmeleon](pokemon)
+    - show me a [charizard](pokemon)
+    - show me a [squirtle](pokemon)
+    - show me a [wartortle](pokemon)
+    - show me a [blastoise](pokemon)
+    - show me a [caterpie](pokemon)
+    - show me a [metapod](pokemon)
+    - show me a [butterfree](pokemon)
+    - show me a [weedle](pokemon)
+    - show me a [kakuna](pokemon)
+    - show me a [beedrill](pokemon)
+    - show me a [pidgey](pokemon)
+    - show me a [pidgeotto](pokemon)
+    - show me a [pidgeot](pokemon)
+    - show me a [rattata](pokemon)
+    - show me a [raticate](pokemon)
+    - show me a [spearow](pokemon)
+    - show me a [fearow](pokemon)
+    - show me an [ekans](pokemon)
+    - show me an [arbok](pokemon)
+    - show me a [pikachu](pokemon)
+    - show me a [raichu](pokemon)
+    - show me a [sandshrew](pokemon)
+    - show me a [sandslash](pokemon)
+    - show me a [nidoran-f](pokemon)
+    - show me a [nidorina](pokemon)
+    - show me a [nidoqueen](pokemon)
+    - show me a [nidoran-m](pokemon)
+    - show me a [nidorino](pokemon)
+    - show me a [nidoking](pokemon)
+    - show me a [clefairy](pokemon)
+    - show me a [clefable](pokemon)
+    - show me a [vulpix](pokemon)
+    - show me a [ninetales](pokemon)
+    - show me a [jigglypuff](pokemon)
+    - show me a [wigglytuff](pokemon)
+    - show me a [zubat](pokemon)
+    - show me a [golbat](pokemon)
+    - show me an [oddish](pokemon)
+    - show me a [gloom](pokemon)
+    - show me a [vileplume](pokemon)
+    - show me a [paras](pokemon)
+    - show me a [parasect](pokemon)
+    - show me a [venonat](pokemon)
+    - show me a [venomoth](pokemon)
+    - show me a [diglett](pokemon)
+    - show me a [dugtrio](pokemon)
+    - show me a [meowth](pokemon)
+    - show me a [persian](pokemon)
+    - show me a [psyduck](pokemon)
+    - show me a [golduck](pokemon)
+    - show me a [mankey](pokemon)
+    - show me a [primeape](pokemon)
+    - show me a [growlithe](pokemon)
+    - show me an [arcanine](pokemon)
+    - show me a [poliwag](pokemon)
+    - show me a [poliwhirl](pokemon)
+    - show me a [poliwrath](pokemon)
+    - show me an [abra](pokemon)
+    - show me a [kadabra](pokemon)
+    - show me an [alakazam](pokemon)
+    - show me a [machop](pokemon)
+    - show me a [machoke](pokemon)
+    - show me a [machamp](pokemon)
+    - show me a [bellsprout](pokemon)
+    - show me a [weepinbell](pokemon)
+    - show me a [victreebel](pokemon)
+    - show me a [tentacool](pokemon)
+    - show me a [tentacruel](pokemon)
+    - show me a [geodude](pokemon)
+    - show me a [graveler](pokemon)
+    - show me a [golem](pokemon)
+    - show me a [ponyta](pokemon)
+    - show me a [rapidash](pokemon)
+    - show me a [slowpoke](pokemon)
+    - show me a [slowbro](pokemon)
+    - show me a [magnemite](pokemon)
+    - show me a [magneton](pokemon)
+    - show me a [farfetchd](pokemon)
+    - show me a [doduo](pokemon)
+    - show me a [dodrio](pokemon)
+    - show me a [seel](pokemon)
+    - show me a [dewgong](pokemon)
+    - show me a [grimer](pokemon)
+    - show me a [muk](pokemon)
+    - show me a [shellder](pokemon)
+    - show me a [cloyster](pokemon)
+    - show me a [gastly](pokemon)
+    - show me a [haunter](pokemon)
+    - show me a [gengar](pokemon)
+    - show me an [onix](pokemon)
+    - show me a [drowzee](pokemon)
+    - show me a [hypno](pokemon)
+    - show me a [krabby](pokemon)
+    - show me a [kingler](pokemon)
+    - show me a [voltorb](pokemon)
+    - show me an [electrode](pokemon)
+    - show me an [exeggcute](pokemon)
+    - show me an [exeggutor](pokemon)
+    - show me a [cubone](pokemon)
+    - show me a [marowak](pokemon)
+    - show me a [hitmonlee](pokemon)
+    - show me a [hitmonchan](pokemon)
+    - show me a [lickitung](pokemon)
+    - show me a [koffing](pokemon)
+    - show me a [weezing](pokemon)
+    - show me a [rhyhorn](pokemon)
+    - show me a [rhydon](pokemon)
+    - show me a [chansey](pokemon)
+    - show me a [tangela](pokemon)
+    - show me a [kangaskhan](pokemon)
+    - show me a [horsea](pokemon)
+    - show me a [seadra](pokemon)
+    - show me a [goldeen](pokemon)
+    - show me a [seaking](pokemon)
+    - show me a [staryu](pokemon)
+    - show me a [starmie](pokemon)
+    - show me a [mr-mime](pokemon)
+    - show me a [scyther](pokemon)
+    - show me a [jynx](pokemon)
+    - show me an [electabuzz](pokemon)
+    - show me a [magmar](pokemon)
+    - show me a [pinsir](pokemon)
+    - show me a [tauros](pokemon)
+    - show me a [magikarp](pokemon)
+    - show me a [gyarados](pokemon)
+    - show me a [lapras](pokemon)
+    - show me a [ditto](pokemon)
+    - show me an [eevee](pokemon)
+    - show me a [vaporeon](pokemon)
+    - show me a [jolteon](pokemon)
+    - show me a [flareon](pokemon)
+    - show me a [porygon](pokemon)
+    - show me an [omanyte](pokemon)
+    - show me an [omastar](pokemon)
+    - show me a [kabuto](pokemon)
+    - show me a [kabutops](pokemon)
+    - show me an [aerodactyl](pokemon)
+    - show me a [snorlax](pokemon)
+    - show me an [articuno](pokemon)
+    - show me a [zapdos](pokemon)
+    - show me a [moltres](pokemon)
+    - show me a [dratini](pokemon)
+    - show me a [dragonair](pokemon)
+    - show me a [dragonite](pokemon)
+    - show me a [mewtwo](pokemon)
