@@ -7,7 +7,7 @@ Pokebot is a chatbot developed using the Rasa 3.x framework. It leverages the ra
 - install all the dependencies mentioned in the requirements.txt
 - replace the mongoDB connection string in actions.py (the current string will remain active till 05/30/2022)
 - To run the chatbot in CLI
-    - if using a virtual environment like venv, put in ```source venv/bin\activate``` to start the virtual environment.
+    - if using a virtual environment like venv, put in ```source venv/bin/activate``` to start the virtual environment.
     - In the same terminal and run ```rasa shell``` to start the chatbot
     - In another terminal, start the rasa actions server by using ```rasa run actions```
 - To run the chatbot locally and then expose the IP+port you can use [ngrok](https://ngrok.com/).
